@@ -6,8 +6,7 @@ require 'redcarpet'
   erb_str_main = File.read(erb_file_main)
   @current_time = Time.now 
   mdFile = Dir.entries("./filemarkdown/").select {|f| !File.directory? f}
-  arr = mdFile.sort
-  list_html = [] 
+  arr = mdFile.sort 
   renderer = Redcarpet::Render::HTML
   markdown = Redcarpet::Markdown.new(renderer,:highlight => true,quote: true, autolink:true,tables: true, strikethrough: true,fenced_code_blocks: true)
   for i in 0..arr.length-1
