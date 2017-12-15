@@ -1,15 +1,16 @@
-# huongdan
-Redcarpet is readily available as a Ruby gem. It will build some native extensions, but the parser is standalone and requires no installed libraries. Starting with Redcarpet 3.0, the minimum required Ruby version is 1.9.2 (or Rubinius in 1.9 mode).
+# Hướng Dẫn 
+Cài đặt Gem redcarpet để hỗ trợ chuyển đổi file markdown sang HTML
 ```
 $ [sudo] gem install redcarpet
 ```
-In local folder run: 
+Tài liệu đầu vào (md file) lưu tại /filemarkdown
+Tại local folder chạy lệnh để tạo server ảo và chuyển đổi các file md từ đầu vào "filemarkdown" 
 ```
 $ python -m SimpleHTTPServer 
 $ ruby hdtest.rb
 ```
 
-In your browser, run:
+Trên trình duyệt, truy cập localhost:8000 để hiển thị trang web
 ```
 localhost:8000/test.html
 ```
