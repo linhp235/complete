@@ -36,14 +36,6 @@
             <% arr.each do |a| %>
               <ul>
                 <a href="#" onclick="loadDoc('<%= File.basename(a, 'md')+'html' %>')"><%= File.basename(a, '.md')%></a>
-                  <% @file_arr ='filemarkdown/'+ a %>
-                  <% File.foreach(@file_arr).with_index do |line| %>
-                    <% if line.start_with? '#' %>
-                      <li>
-                        <a href="#"><%= markdown.render("#{line}") %></a>
-                      </li>
-                    <% end %>
-                <%end %>
               </ul>
             <% end %>
         </div>
